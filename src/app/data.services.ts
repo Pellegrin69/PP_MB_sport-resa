@@ -5,6 +5,11 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
   providedIn: 'root',
 })
 export class DataService implements InMemoryDbService {
+  /**
+   * Crée une base de données fictive en mémoire contenant des données simulées.
+   * Cette méthode est utilisée par Angular InMemoryWebApi pour simuler un serveur HTTP.
+   * @returns Un objet contenant des tableaux de données simulées (utilisateurs, réservations, séances, etablissements).
+   */
   createDb() {
     const utilisateurs = [
       {
