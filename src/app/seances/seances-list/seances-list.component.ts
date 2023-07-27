@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Seance } from '../seances.model';
 import { SeanceService } from '../seances.service';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-seances-list',
