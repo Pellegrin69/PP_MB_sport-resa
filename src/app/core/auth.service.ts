@@ -48,9 +48,8 @@ export class AuthService {
 
   private generateJwtToken(): string {
     // Générez un nouveau token JWT avec les données que vous souhaitez
-    const token = jwt.sign({ username: 'user' }, 'secret_key', {
+    return jwt.sign({ username: 'user' }, 'secret_key', {
       expiresIn: '1h',
     });
-    return token;
   }
 }
