@@ -32,11 +32,11 @@ export class SeanceService {
     );
   }
 
-  editSeance(seance: Seance): Observable<any> {
+  editSeance(seance: Seance) {
     return this.http.put(this.seancesUrl + seance.id, seance);
   }
 
-  deleteSeance(id: number): Observable<any> {
+  deleteSeance(id: number) {
     return this.http.delete(this.seancesUrl + id);
   }
 }

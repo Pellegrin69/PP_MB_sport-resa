@@ -3,18 +3,16 @@ import { Injectable } from '@angular/core';
 
 import * as jwt from 'jsonwebtoken';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {
-
-  }
-
-  logIn(credentials: { username: string, password: string }): boolean {
+  logIn(credentials: { username: string; password: string }): boolean {
     // Vérifiez les informations d'identification ici (remplacez les valeurs en dur par vos propres valeurs)
-    if (credentials.username === 'user' && credentials.password === 'password') {
+    if (
+      credentials.username === 'user' &&
+      credentials.password === 'password'
+    ) {
       // Authentification réussie
       // Stockez le token JWT dans le local storage
       const token = this.generateJwtToken();
@@ -36,7 +34,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const decodedToken = jwt.verify(token, 'secret_key');
+        // const decodedToken = jwt.verify(token, 'secret_key');
         return true;
       } catch (error) {
         // Le token est invalide ou a expiré
@@ -50,7 +48,9 @@ export class AuthService {
 
   private generateJwtToken(): string {
     // Générez un nouveau token JWT avec les données que vous souhaitez
-    const token = jwt.sign({ username: 'user' }, 'secret_key', { expiresIn: '1h' });
+    const token = jwt.sign({ username: 'user' }, 'secret_key', {
+      expiresIn: '1h',
+    });
     return token;
   }
 }
