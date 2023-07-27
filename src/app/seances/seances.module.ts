@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { CommonModule, DatePipe } from '@angular/common';
 import { SeancesRoutingModule } from './seances-routing.module';
 import { SeancesListComponent } from './seances-list/seances-list.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    SeancesListComponent
-  ],
+  declarations: [SeancesListComponent],
   imports: [
     CommonModule,
-    SeancesRoutingModule
-  ]
+    SeancesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [DatePipe],
+  exports: [SeancesListComponent],
 })
-export class SeancesModule { }
+export class SeancesModule {}

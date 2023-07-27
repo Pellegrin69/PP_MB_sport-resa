@@ -77,7 +77,7 @@ export class DataService implements InMemoryDbService {
       },
     ];
 
-    const sessions = [
+    const seances = [
       {
         id: 1,
         theme: 'Yoga',
@@ -168,6 +168,6 @@ export class DataService implements InMemoryDbService {
       },
     ];
 
-    return { utilisateurs, reservations, sessions, etablissements };
+    return { utilisateurs, reservations, seances, etablissements };
   }
 }

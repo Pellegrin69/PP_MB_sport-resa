@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module'; // Importez le module AuthModul
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './data.services';
+import {SeancesModule} from "./seances/seances.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { DataService } from './data.services';
     AuthModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
+    SeancesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
