@@ -2,6 +2,8 @@
 
 Ce projet a été généré avec Angular CLI version 16.1.6.
 
+Pour retrouver notre repository GitHub, cliquez [ici](https://github.com/Pellegrin69/PP_MB_sport-resa).
+
 ## Découpage en Modules
 
 1. **Module d'Authentification :**
