@@ -1,12 +1,17 @@
-<!-- app.component.html -->
+<!-- Template HTML du composant AppComponent -->
+
+<!-- Navigation avec des liens de routage pour différentes pages -->
 <nav>
   <ul>
-    <li><a routerLink="/login">Se connecter</a></li>
-    <li><a routerLink="/seances">Séances de sport</a></li>
-    <li><a routerLink="/reservations">Mes réservations</a></li>
-    <li><a routerLink="/admin/etablissements">Gestion des établissements</a></li>
-    <li><a routerLink="/admin/seances">Gestion des séances de sport</a></li>
-    <li><a routerLink="/notifications">Notifications</a></li>
+    <li><a routerLink="/login">Se connecter</a></li> <!-- Lien vers la page de connexion -->
+    <li><a routerLink="/seances">Séances de sport</a></li> <!-- Lien vers la page des séances de sport -->
+    <li><a routerLink="/reservations">Mes réservations</a></li> <!-- Lien vers la page des réservations de l'utilisateur -->
+    <li><a routerLink="/admin/etablissements">Gestion des établissements</a></li> <!-- Lien vers la page de gestion des établissements (pour les administrateurs) -->
+    <li><a routerLink="/admin/seances">Gestion des séances de sport</a></li> <!-- Lien vers la page de gestion des séances de sport (pour les administrateurs) -->
+    <li><a routerLink="/notifications">Notifications</a></li> <!-- Lien vers la page des notifications -->
   </ul>
 </nav>
+
+<!-- L'élément router-outlet est utilisé pour afficher dynamiquement les composants
+correspondants aux routes définies dans le Router de l'application -->
 <router-outlet></router-outlet>
